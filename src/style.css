@@ -1,10 +1,34 @@
+:root {
+  --primayColor: hsl(14, 86%, 42%);
+}
+
 body {
-  background-color: hsl(13deg 100% 98.49%);
+  background-color: hsl(13, 31%, 94%);
 }
 
 .dessertImage {
-  border: 3px solid seagreen;
+  height: 170px;
+  border-radius: 8px;
 }
+
+.addToCart {
+  background-color: white;
+  padding: 8px;
+  border: 1px gray solid;
+  width: 100px;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 15px;
+}
+
+.dessertPrice {
+  color: var(--primayColor);
+}
+
+.userCart h1 {
+  color: var(--primayColor);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

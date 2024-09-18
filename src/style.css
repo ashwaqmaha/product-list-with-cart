@@ -1,9 +1,43 @@
+/* Note to self: ToDO clean up and refactor the code */
+
 :root {
   --primayColor: hsl(14, 86%, 42%);
 }
 
+@font-face {
+  font-family: "MainHeading";
+  src: url(../assets/fonts/static/RedHatText-Bold.ttf);
+}
+
+@font-face {
+  font-family: "DisplayBoldSubheader";
+  src: url(../assets/fonts/static/RedHatText-Regular.ttf);
+}
+
+@font-face {
+  font-family: "DisplayTitleSubheader";
+  src: url(../assets/fonts/static/RedHatText-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "testing";
+  src: url(../assets/fonts/RedHatText-VariableFont_wght.ttf);
+}
+
 body {
   background-color: hsl(13, 31%, 94%);
+}
+
+.dessertType {
+  color: hsl(7, 20%, 60%);
+}
+
+h1 {
+  font-family: "MainHeading";
+}
+
+.dessertItem {
+  font-family: "DisplayBoldSubheader";
 }
 
 .dessertImage {
@@ -13,9 +47,9 @@ body {
 
 .addToCart {
   background-color: white;
-  padding: 8px;
+  font-family: "DisplayTitleSubheader";
+  padding: 15px;
   border: 1px gray solid;
-  width: 100px;
   text-align: center;
   border-radius: 30px;
   font-size: 15px;
@@ -25,8 +59,22 @@ body {
   color: var(--primayColor);
 }
 
+.userCart {
+  background-color: white;
+  width: 400px;
+  padding: 1px 5px 20px 20px;
+  text-align: center;
+  border-radius: 15px;
+}
+
 .userCart h1 {
   color: var(--primayColor);
+  text-align: left;
+}
+
+.userCart p {
+  color: hsl(12, 20%, 44%);
+  font-family: "DisplayTitleSubheader";
 }
 
 .attribution {

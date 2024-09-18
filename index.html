@@ -1,91 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product list with cart</title>
-  <link rel="stylesheet" href="src/style.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-</head>
-<body>
+    <title>Frontend Mentor | Product list with cart</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
     <div class="dessertsMenu">
-        <h1>Desserts</h1>
-        <div class="dessertItem">
-            <img class="dessertImage" src="./assets/images/image-waffle-desktop.jpg" alt="Waffle">
-            <div class="addToCart"> <img src="assets/images/icon-add-to-cart.svg" alt="addToCart"> Add to Cart</div>
-            <h3 class="dessertType">Waffle</h3>
-            <h2 class="dessertName">Waffle with Berries</h2>
-            <h2 class="dessertPrice">6.50</h2>
-        </div>
-        <div class="dessertItem"></div>
-            <img class="dessertImage" src="./assets/images/image-creme-brulee-desktop.jpg" alt="Crème Brûlée">
-            <div class="addToCart"> <img src="assets/images/icon-add-to-cart.svg" alt="addToCart"> Add to Cart</div>
-            <h3 class="dessertType">Crème Brûlée</h3>
-            <h2 class="dessertName">Vanilla Bean Crème Brûlée</h2>
-            <h2 class="dessertPrice">7.00</h2>
-        </div>
-        <div class="dessertItem"></div>
-            <img class="dessertImage" src="./assets/images/image-macaron-desktop.jpg" alt="Macaron">
-            <div class="addToCart"> <img src="assets/images/icon-add-to-cart.svg" alt="addToCart"> Add to Cart</div>
-            <h3 class="dessertType">Macaron</h3>
-            <h2 class="dessertName">Macaron Mix of Five</h2>
-            <h2 class="dessertPrice">8.00</h2>
-        </div>
-        <div class="dessertItem"></div>
-            <img class="dessertImage" src="./assets/images/image-tiramisu-desktop.jpg" alt="Tiramisu">
-            <div class="addToCart"> <img src="assets/images/icon-add-to-cart.svg" alt="addToCart"> Add to Cart</div>
-            <h3 class="dessertType">Tiramisu</h3>
-            <h2 class="dessertName">Classic Tiramisu</h2>
-            <h2 class="dessertPrice">5.50</h2>
-        </div>
-        <div class="dessertItem"></div>
-            <img class="dessertImage" src="./assets/images/image-baklava-desktop.jpg" alt="Baklava">
-            <div class="addToCart"> <img src="assets/images/icon-add-to-cart.svg" alt="addToCart"> Add to Cart</div>
-            <h3 class="dessertType">Baklava</h3>
-            <h2 class="dessertName">Pistachio Baklava</h2>
-            <h2 class="dessertPrice">4.00</h2>
-        </div>
-        <div class="dessertItem"></div>
-            <img class="dessertImage" src="./assets/images/image-meringue-desktop.jpg" alt="Meringue">
-            <div class="addToCart"> <img src="assets/images/icon-add-to-cart.svg" alt="addToCart"> Add to Cart</div>
-            <h3 class="dessertType">Pie</h3>
-            <h2 class="dessertName">Lemon Meringue Pie</h2>
-            <h2 class="dessertPrice">5.00</h2>
-        </div>
-        <div class="dessertItem"></div>
-            <img class="dessertImage" src="./assets/images/image-cake-desktop.jpg" alt="Cake">
-            <div class="addToCart"> <img src="assets/images/icon-add-to-cart.svg" alt="addToCart"> Add to Cart</div>
-            <h3 class="dessertType">Cake</h3>
-            <h2 class="dessertName">Red Velvet Cake</h2>
-            <h2 class="dessertPrice">4.50</h2>
-        </div>
-        <div class="dessertItem"></div>
-            <img class="dessertImage" src="./assets/images/image-brownie-desktop.jpg" alt="Brownie">
-            <div class="addToCart"> <img src="assets/images/icon-add-to-cart.svg" alt="addToCart"> Add to Cart</div>
-            <h3 class="dessertType">Brownie</h3>
-            <h2 class="dessertName">Salted Caramel Brownie</h2>
-            <h2 class="dessertPrice">5.50</h2>
-        </div>
-        <div class="dessertItem"></div>
-            <img class="dessertImage" src="./assets/images/image-panna-cotta-desktop.jpg" alt="Panna">
-            <div class="addToCart"> <img src="assets/images/icon-add-to-cart.svg" alt="addToCart"> Add to Cart</div>
-            <h3 class="dessertType">Panna Cotta</h3>
-            <h2 class="dessertName">Vanilla Panna Cotta</h2>
-            <h2 class="dessertPrice">6.50</h2>
-        </div>
+      <h1>Desserts</h1>
+      <div class="dessertItem">
+        <img
+          class="dessertImage"
+          src="./assets/images/image-waffle-desktop.jpg"
+          alt="Waffle"
+        />
+        <button class="addToCart">
+          <img src="assets/images/icon-add-to-cart.svg" alt="addToCart" /> Add
+          to Cart
+        </button>
+        <h3 class="dessertType">Waffle</h3>
+        <h2 class="dessertName">Waffle with Berries</h2>
+        <h2 class="dessertPrice">6.50</h2>
+      </div>
+      <div class="dessertItem">
+        <img
+          class="dessertImage"
+          src="./assets/images/image-creme-brulee-desktop.jpg"
+          alt="Crème Brûlée"
+        />
+        <button class="addToCart">
+          <img src="assets/images/icon-add-to-cart.svg" alt="addToCart" /> Add
+          to Cart
+        </button>
+        <h3 class="dessertType">Crème Brûlée</h3>
+        <h2 class="dessertName">Vanilla Bean Crème Brûlée</h2>
+        <h2 class="dessertPrice">7.00</h2>
+      </div>
+      <div class="dessertItem">
+        <img
+          class="dessertImage"
+          src="./assets/images/image-macaron-desktop.jpg"
+          alt="Macaron"
+        />
+        <button class="addToCart">
+          <img src="assets/images/icon-add-to-cart.svg" alt="addToCart" /> Add
+          to Cart
+        </button>
+        <h3 class="dessertType">Macaron</h3>
+        <h2 class="dessertName">Macaron Mix of Five</h2>
+        <h2 class="dessertPrice">8.00</h2>
+      </div>
+      <div class="dessertItem">
+        <img
+          class="dessertImage"
+          src="./assets/images/image-tiramisu-desktop.jpg"
+          alt="Tiramisu"
+        />
+        <button class="addToCart">
+          <img src="assets/images/icon-add-to-cart.svg" alt="addToCart" /> Add
+          to Cart
+        </button>
+        <h3 class="dessertType">Tiramisu</h3>
+        <h2 class="dessertName">Classic Tiramisu</h2>
+        <h2 class="dessertPrice">5.50</h2>
+      </div>
+      <div class="dessertItem">
+        <img
+          class="dessertImage"
+          src="./assets/images/image-baklava-desktop.jpg"
+          alt="Baklava"
+        />
+        <button class="addToCart">
+          <img src="assets/images/icon-add-to-cart.svg" alt="addToCart" /> Add
+          to Cart
+        </button>
+        <h3 class="dessertType">Baklava</h3>
+        <h2 class="dessertName">Pistachio Baklava</h2>
+        <h2 class="dessertPrice">4.00</h2>
+      </div>
+      <div class="dessertItem">
+        <img
+          class="dessertImage"
+          src="./assets/images/image-meringue-desktop.jpg"
+          alt="Meringue"
+        />
+        <button class="addToCart">
+          <img src="assets/images/icon-add-to-cart.svg" alt="addToCart" /> Add
+          to Cart
+        </button>
+        <h3 class="dessertType">Pie</h3>
+        <h2 class="dessertName">Lemon Meringue Pie</h2>
+        <h2 class="dessertPrice">5.00</h2>
+      </div>
+      <div class="dessertItem">
+        <img
+          class="dessertImage"
+          src="./assets/images/image-cake-desktop.jpg"
+          alt="Cake"
+        />
+        <button class="addToCart">
+          <img src="assets/images/icon-add-to-cart.svg" alt="addToCart" /> Add
+          to Cart
+        </button>
+        <h3 class="dessertType">Cake</h3>
+        <h2 class="dessertName">Red Velvet Cake</h2>
+        <h2 class="dessertPrice">4.50</h2>
+      </div>
+      <div class="dessertItem">
+        <img
+          class="dessertImage"
+          src="./assets/images/image-brownie-desktop.jpg"
+          alt="Brownie"
+        />
+        <button class="addToCart">
+          <img src="assets/images/icon-add-to-cart.svg" alt="addToCart" /> Add
+          to Cart
+        </button>
+        <h3 class="dessertType">Brownie</h3>
+        <h2 class="dessertName">Salted Caramel Brownie</h2>
+        <h2 class="dessertPrice">5.50</h2>
+      </div>
+      <div class="dessertItem">
+        <img
+          class="dessertImage"
+          src="./assets/images/image-panna-cotta-desktop.jpg"
+          alt="Panna"
+        />
+        <button class="addToCart">
+          <img src="assets/images/icon-add-to-cart.svg" alt="addToCart" /> Add
+          to Cart
+        </button>
+        <h3 class="dessertType">Panna Cotta</h3>
+        <h2 class="dessertName">Vanilla Panna Cotta</h2>
+        <h2 class="dessertPrice">6.50</h2>
+      </div>
     </div>
     <div class="userCart">
-        <h1>Your Cart (0)</h1>
-        <img src="assets/images/illustration-empty-cart.svg" alt="illustration-empty-cart">
-        <p>Your added items will appear here</p>
+      <h1>Your Cart (0)</h1>
+      <img
+        src="assets/images/illustration-empty-cart.svg"
+        alt="illustration-empty-cart"
+      />
+      <p>Your added items will appear here</p>
     </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="https://www.linkedin.com/in/ashwaq-mahamed-581ab7299/" target="_blank">Ashwaq Mahamed</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by
+      <a
+        href="https://www.linkedin.com/in/ashwaq-mahamed-581ab7299/"
+        target="_blank"
+        >Ashwaq Mahamed</a
+      >.
+    </div>
+  </body>
 </html>

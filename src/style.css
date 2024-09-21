@@ -19,36 +19,62 @@
   src: url(../assets/fonts/static/RedHatText-SemiBold.ttf);
 }
 
-@font-face {
-  font-family: "testing";
-  src: url(../assets/fonts/RedHatText-VariableFont_wght.ttf);
-}
-
 body {
   background-color: hsl(13, 31%, 94%);
+  margin: 100px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dessertsMenu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .dessertType {
   color: hsl(7, 20%, 60%);
 }
 
+.dessertName {
+  font-size: 16px;
+  line-height: 3px;
+}
+
 h1 {
   font-family: "MainHeading";
 }
 
+section h1 {
+  font-size: 50px;
+  margin-top: -4px;
+}
+
 .dessertItem {
   font-family: "DisplayBoldSubheader";
+  font-size: 11px;
 }
 
 .dessertImage {
-  height: 170px;
+  height: 220px;
   border-radius: 8px;
 }
 
+.cartSection {
+  position: relative;
+  margin-bottom: 30px;
+}
+
 .addToCart {
+  position: absolute;
+  left: 50px;
+  bottom: -15px;
   background-color: white;
   font-family: "DisplayTitleSubheader";
-  padding: 15px;
+  padding: 10px;
   border: 1px gray solid;
   text-align: center;
   border-radius: 30px;
@@ -62,6 +88,7 @@ h1 {
 .userCart {
   background-color: white;
   width: 400px;
+  height: 280px;
   padding: 1px 5px 20px 20px;
   text-align: center;
   border-radius: 15px;

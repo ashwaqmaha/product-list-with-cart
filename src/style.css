@@ -29,6 +29,16 @@ main {
   justify-content: space-around;
 }
 
+h1 {
+  font-family: "MainHeading";
+}
+
+section h1 {
+  font-size: 50px;
+  margin-top: -4px;
+}
+
+/* styling default desktop */
 .dessertsMenu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -44,22 +54,13 @@ main {
   line-height: 3px;
 }
 
-h1 {
-  font-family: "MainHeading";
-}
-
-section h1 {
-  font-size: 50px;
-  margin-top: -4px;
-}
-
 .dessertItem {
   font-family: "DisplayBoldSubheader";
   font-size: 11px;
 }
 
 .dessertImage {
-  height: 220px;
+  height: 230px;
   border-radius: 8px;
 }
 
@@ -70,7 +71,7 @@ section h1 {
 
 .addToCart {
   position: absolute;
-  left: 50px;
+  left: 60px;
   bottom: -15px;
   background-color: white;
   font-family: "DisplayTitleSubheader";
@@ -105,10 +106,21 @@ section h1 {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 13px;
   text-align: center;
+  margin: 30px;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+/* styling for hovering */
+
+.addToCart:hover {
+  color: var(--primayColor);
+  border: 1px var(--primayColor) solid;
+}
+
+/* on click for the add to cart styling */
+

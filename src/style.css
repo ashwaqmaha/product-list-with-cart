@@ -66,13 +66,17 @@ section h1 {
 }
 
 .cartSection {
+  display: flex;
+  flex-direction: column;
+  
   position: relative;
   margin-bottom: 30px;
 }
 
 .addToCart {
+  width: 150px;
+  align-self: center;
   position: absolute;
-  left: 60px;
   bottom: -15px;
   background-color: white;
   font-family: "DisplayTitleSubheader";
@@ -124,4 +128,3 @@ section h1 {
 }
 
 /* on click for the add to cart styling */
-

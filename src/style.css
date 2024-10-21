@@ -94,8 +94,8 @@ section h1 {
 
 .userCart {
   background-color: white;
-  width: 400px;
-  height: 280px;
+  width: 25rem;
+  height: 20rem;
   padding: 1px 5px 20px 20px;
   text-align: center;
   border-radius: 15px;
@@ -128,24 +128,36 @@ section h1 {
   border: 1px var(--primayColor) solid;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 350px) {
+  .dessertImage {
+    height: 16rem;
+  }
+}
+
+/* styling default mobile */
+@media (max-width: 540px) {
   body {
     margin: 1rem;
   }
+
   .dessertsMenu {
     display: block;
-    /* grid-template-columns: 1fr;
-    gap: 20px; */
   }
 
   .userCart {
-    background-color: white;
-    /* width: 400px;
-  height: 280px; */
-    height: 20rem;
-    width: 10rem;
-    padding: 1px 5px 20px 20px;
-    text-align: center;
-    border-radius: 15px;
+    width: 18rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1280px) {
+  body {
+    margin: 1rem;
+  }
+
+  .dessertsMenu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .userCart {
+    width: 30rem;
   }
 }

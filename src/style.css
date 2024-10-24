@@ -110,6 +110,11 @@ section h1 {
   font-size: 15px;
 }
 
+.cartItem {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
 .quantityIcon {
   border: 1px white solid;
   border-radius: 15px;

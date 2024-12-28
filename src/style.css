@@ -141,6 +141,7 @@ section h1 {
 
 .userCart p {
   color: hsl(12, 20%, 44%);
+  text-align: start;
   font-family: "DisplayTitleSubheader";
 }
 
@@ -154,6 +155,9 @@ section h1 {
   color: hsl(228, 45%, 44%);
 }
 
+.cartItem {
+  justify-content: space-between;
+}
 /* styling for hovering */
 
 .addToCart:hover {

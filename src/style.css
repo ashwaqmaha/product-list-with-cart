@@ -35,6 +35,10 @@ h1 {
   font-family: "MainHeading";
 }
 
+hr {
+  margin-right: 2rem;
+}
+
 section h1 {
   font-size: 50px;
   margin-top: -4px;

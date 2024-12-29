@@ -110,6 +110,17 @@ section h1 {
   font-size: 15px;
 }
 
+.confirmOrder {
+  background-color: var(--primayColor);
+  color: white;
+  font-family: "DisplayTitleSubheader";
+  padding: 10px;
+  border: 1px var(--primayColor) solid;
+  border-radius: 30px;
+  font-size: 15px;
+  width: 150px;
+}
+
 .cartItem {
   display: flex;
   /* justify-content: space-between; */
@@ -123,6 +134,11 @@ section h1 {
 
 .dessertPrice {
   color: var(--primayColor);
+}
+
+#hasItems {
+  width: 28rem;
+  height: 35rem;
 }
 
 .userCart {
@@ -141,8 +157,15 @@ section h1 {
 
 .userCart p {
   color: hsl(12, 20%, 44%);
-  text-align: start;
   font-family: "DisplayTitleSubheader";
+}
+
+#noItems p {
+  text-align: center;
+}
+
+#hasItems p {
+  text-align: start;
 }
 
 .attribution {
@@ -155,9 +178,16 @@ section h1 {
   color: hsl(228, 45%, 44%);
 }
 
-.cartItem {
-  justify-content: space-between;
+.orderTotal {
+  display: flex;
 }
+
+.cartItem,
+.orderTotal {
+  justify-content: space-between;
+  padding-right: 2rem;
+}
+
 /* styling for hovering */
 
 .addToCart:hover {

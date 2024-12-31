@@ -37,6 +37,8 @@ h1 {
 
 hr {
   margin-right: 2rem;
+  border-color: hsl(0, 0%, 100%);
+  opacity: 0.2;
 }
 
 section h1 {
@@ -56,6 +58,7 @@ section h1 {
 }
 
 .dessertName {
+  font-family: "DisplayBoldSubheader";
   font-size: 16px;
   line-height: 3px;
 }
@@ -127,7 +130,6 @@ section h1 {
 
 .cartItem {
   display: flex;
-  /* justify-content: space-between; */
 }
 
 .quantityIcon {
@@ -172,6 +174,10 @@ section h1 {
   text-align: start;
 }
 
+.numberOfItems {
+  color: var(--primayColor);
+}
+
 .attribution {
   font-size: 13px;
   text-align: center;
@@ -190,6 +196,16 @@ section h1 {
 .orderTotal {
   justify-content: space-between;
   padding-right: 2rem;
+}
+
+.unitPrice {
+  margin: 5px;
+  font-family: "DisplayBoldSubheader";
+}
+
+.totalAmount {
+  color: black;
+  font-family: "MainHeading";
 }
 
 /* styling for hovering */

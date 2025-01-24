@@ -212,7 +212,15 @@ section h1 {
   margin-right: 30px;
   border-radius: 10px;
   padding: 20px;
-  background-color: hsl(22, 57.10%, 97.30%);
+  font-family: "DisplayBoldSubheader";
+  background-color: hsl(22, 57.1%, 97.3%);
+}
+
+.confirmOrder {
+  margin: 0 auto;
+  width: 1000px;
+  font-size: 18px;
+  /* margin: 20px; */
 }
 
 .icon-remove-item {

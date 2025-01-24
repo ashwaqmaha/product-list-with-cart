@@ -209,7 +209,10 @@ section h1 {
 }
 
 .deliveryInfo {
-  background-color: hsl(14, 25%, 72%);
+  margin-right: 30px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: hsl(22, 57.10%, 97.30%);
 }
 
 .icon-remove-item {

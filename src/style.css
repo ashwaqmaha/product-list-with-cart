@@ -143,7 +143,7 @@ section h1 {
 }
 
 #hasItems {
-  width: 28rem;
+  /* width: 28rem; */
   height: 35rem;
 }
 
@@ -271,6 +271,15 @@ section h1 {
 
   .userCart {
     width: 18rem;
+  }
+
+  .deliveryInfo,
+  .confirmOrder {
+    max-width: 260px;
+  }
+
+  .deliveryInfo {
+    font-size: 14px;
   }
 }
 

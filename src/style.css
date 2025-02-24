@@ -19,6 +19,11 @@
   src: url(../assets/fonts/static/RedHatText-SemiBold.ttf);
 }
 
+html {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   background-color: hsl(13, 31%, 94%);
   margin: 100px;
@@ -59,7 +64,7 @@ section h1 {
 
 .dessertName {
   font-family: "DisplayBoldSubheader";
-  font-size: 16px;
+  font-size: 18px;
   line-height: 3px;
 }
 

@@ -222,8 +222,7 @@ section h1 {
 
 .deliveryInfo,
 .confirmOrder {
-  width: 100%;
-  max-width: 420px;
+  width: 94%;
 }
 
 .deliveryInfo {

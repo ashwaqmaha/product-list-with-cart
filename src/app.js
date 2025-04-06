@@ -5,63 +5,75 @@ addToCartButtons.forEach((button) => {
     const cartSection = button.closest(".cartSection");
     const image = cartSection.querySelector(".dessertImage");
 
-    // Replace image class
-    if (image) {
-      image.classList.remove("dessertImage");
-      image.classList.add("selectedItemToCartImage");
-    }
-
-    // Replace button with selected style
-    button.classList.remove("addToCart");
-    button.classList.add("selectedItemToCart");
-
-    
     let quantity = 1;
 
-    // Replace innerHTML with increment/decrement layout
-    button.innerHTML = `
-      <img
-        src="assets/images/icon-decrement-quantity.svg"
-        class="quantityIcon decrement"
-        alt="icon-decrement-quantity"
-      />
-      <span class="quantityValue">${quantity}</span>
-      <img
-        src="assets/images/icon-increment-quantity.svg"
-        class="quantityIcon increment"
-        alt="icon-increment-quantity"
-      />
-    `;
-
-    // Add event listeners to new icons
-    const decrementBtn = button.querySelector(".decrement");
-    const incrementBtn = button.querySelector(".increment");
-    const quantityDisplay = button.querySelector(".quantityValue");
-
-    incrementBtn.addEventListener("click", (event) => {
-      event.stopPropagation(); // Prevent clicking the whole button again
-      quantity++;
-      quantityDisplay.textContent = quantity;
-    });
-
-    decrementBtn.addEventListener("click", (event) => {
-      event.stopPropagation();
-      quantity--;
-      if (quantity <= 0) {
-        // Reset to original state
-        button.classList.remove("selectedItemToCart");
-        button.classList.add("addToCart");
-        button.innerHTML = `
-          <img src="assets/images/icon-add-to-cart.svg" alt="addToCart" />
-          Add to Cart
-        `;
-
-        image.classList.remove("selectedItemToCartImage");
-        image.classList.add("dessertImage");
-
-      } else {
-        quantityDisplay.textContent = quantity;
-      }
-    });
+    replaceImageStyle(image);
+    replaceButtonWithQuantityUI(button, quantity);
+    handleIncrementDecrement(button, image, quantity);
   });
 });
+
+// Replace image class for selected item
+function replaceImageStyle(image) {
+  if (image) {
+    image.classList.remove("dessertImage");
+    image.classList.add("selectedItemToCartImage");
+  }
+}
+
+// Update button with quantity controls
+function replaceButtonWithQuantityUI(button, quantity) {
+  button.classList.remove("addToCart");
+  button.classList.add("selectedItemToCart");
+
+  button.innerHTML = `
+    <img
+      src="assets/images/icon-decrement-quantity.svg"
+      class="quantityIcon decrement"
+      alt="icon-decrement-quantity"
+    />
+    <span class="quantityValue">${quantity}</span>
+    <img
+      src="assets/images/icon-increment-quantity.svg"
+      class="quantityIcon increment"
+      alt="icon-increment-quantity"
+    />
+  `;
+}
+
+// Handle increment/decrement logic
+function handleIncrementDecrement(button, image, quantity) {
+  const decrementBtn = button.querySelector(".decrement");
+  const incrementBtn = button.querySelector(".increment");
+  const quantityDisplay = button.querySelector(".quantityValue");
+
+  incrementBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
+    quantity++;
+    quantityDisplay.textContent = quantity;
+  });
+
+  decrementBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
+    quantity--;
+    if (quantity <= 0) {
+      resetToOriginalButton(button, image);
+    } else {
+      quantityDisplay.textContent = quantity;
+    }
+  });
+}
+
+// Reset button and image to original state
+function resetToOriginalButton(button, image) {
+  button.classList.remove("selectedItemToCart");
+  button.classList.add("addToCart");
+
+  button.innerHTML = `
+    <img src="assets/images/icon-add-to-cart.svg" alt="addToCart" />
+    Add to Cart
+  `;
+
+  image.classList.remove("selectedItemToCartImage");
+  image.classList.add("dessertImage");
+}

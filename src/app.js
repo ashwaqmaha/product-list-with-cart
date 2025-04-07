@@ -2,14 +2,29 @@ const addToCartButtons = document.querySelectorAll(".addToCart");
 
 addToCartButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const cartSection = button.closest(".cartSection");
-    const image = cartSection.querySelector(".dessertImage");
+    const dessertItem = button.closest(".dessertItem");
+    const dessertImage = dessertItem.querySelector(".dessertImage");
+    const emptyCart = document.querySelector("#noItems");
+    const hasItemsCart = document.querySelector("#hasItems");
 
     let quantity = 1;
 
-    replaceImageStyle(image);
+    replaceImageStyle(dessertImage);
+    emptyCart.style.display = "none";
+    hasItemsCart.style.display = "block";
+
+    /* Info needed for the userCart:
+    dessertName
+    Quantity - how many
+    unitPrice
+    Not from dessertItems but needed:
+    totalPrice - unitPrice * Quantity
+    totalAmount - all the total prices added together
+    numberOfItems - all the Quantity of the items added together
+    */
+   
     replaceButtonWithQuantityUI(button, quantity);
-    handleIncrementDecrement(button, image, quantity);
+    handleIncrementDecrement(button, dessertImage, quantity);
   });
 });
 

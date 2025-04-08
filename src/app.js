@@ -1,4 +1,5 @@
 const addToCartButtons = document.querySelectorAll(".addToCart");
+let cartData = [];
 
 addToCartButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -6,7 +7,10 @@ addToCartButtons.forEach((button) => {
     const dessertImage = dessertItem.querySelector(".dessertImage");
     const emptyCart = document.querySelector("#noItems");
     const hasItemsCart = document.querySelector("#hasItems");
+    const dessertName = dessertItem.querySelector(".dessertName").innerHTML;
+    const unitPrice = dessertItem.querySelector(".dessertPrice").innerHTML;
 
+    let itemInfo = {};
     let quantity = 1;
 
     replaceImageStyle(dessertImage);
@@ -22,9 +26,21 @@ addToCartButtons.forEach((button) => {
     totalAmount - all the total prices added together
     numberOfItems - all the Quantity of the items added together
     */
-   
+
+    itemInfo["dessertName"] = dessertName;
+    itemInfo["unitPrice"] = unitPrice;
+    itemInfo["quantity"] = quantity;
+
+    const existingItem = cartData.find(
+      (item) => item.dessertName === dessertName
+    );
+
+    if (!existingItem) {
+      cartData.push(itemInfo);
+    }
+    console.log(cartData);
     replaceButtonWithQuantityUI(button, quantity);
-    handleIncrementDecrement(button, dessertImage, quantity);
+    handleIncrementDecrement(button, dessertImage, quantity, dessertName);
   });
 });
 
@@ -57,7 +73,7 @@ function replaceButtonWithQuantityUI(button, quantity) {
 }
 
 // Handle increment/decrement logic
-function handleIncrementDecrement(button, image, quantity) {
+function handleIncrementDecrement(button, image, quantity, dessertName) {
   const decrementBtn = button.querySelector(".decrement");
   const incrementBtn = button.querySelector(".increment");
   const quantityDisplay = button.querySelector(".quantityValue");
@@ -66,16 +82,29 @@ function handleIncrementDecrement(button, image, quantity) {
     event.stopPropagation();
     quantity++;
     quantityDisplay.textContent = quantity;
+
+    // Update quantity in cartData
+    const item = cartData.find((item) => item.dessertName === dessertName);
+    if (item) item.quantity = quantity;
+    console.log(cartData);
   });
 
   decrementBtn.addEventListener("click", (event) => {
     event.stopPropagation();
     quantity--;
     if (quantity <= 0) {
+      // Remove from cartData
+      cartData = cartData.filter((item) => item.dessertName !== dessertName);
       resetToOriginalButton(button, image);
     } else {
       quantityDisplay.textContent = quantity;
+
+      // Update quantity in cartData
+      const item = cartData.find((item) => item.dessertName === dessertName);
+      if (item) item.quantity = quantity;
     }
+
+    console.log(cartData);
   });
 }
 
